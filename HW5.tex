@@ -80,7 +80,7 @@
 
 We know that the subset sum problem is NP-Complete. Let an instance of the subset sum problem be $(U, M)$, where $U$ is a set of numbers and we need to find a set of numbers $S$ such that $S \subseteq U$ and $\sum S = M$.
 
-Let us construct an instance of the partition problem $(A)$, where $A$ is a set of numbers that can be partitioned into two sets such that the elements of each set add up to the same number. Construct the set $A$ in such a manner that it consists of all the elements in set $U$ with the addition of an element that has a value $\sum U - 2*M$. So the set $A$ will have one more element than the set $U$.
+Let us construct an instance of the partition problem $(A)$, where $A$ is a set of numbers that needs to be partitioned into two sets such that the elements of each set add up to the same number. Construct the set $A$ in such a manner that it consists of all the elements in set $U$ with the addition of an element that has a value $\sum U - 2*M$. So the set $A$ will have one more element than the set $U$.
 
 This construction can clearly be done in polynomial time. Also, given a certificate of the partition problem, which will be a subset of $A$, we can verify in $O(\left | A \right|)$, or polynomial time, that the certificate is correct. This shows that the partition problem is in the set NP. 
 
